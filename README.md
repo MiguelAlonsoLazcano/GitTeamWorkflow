@@ -1,64 +1,71 @@
 # TerminalSetUp
 
+Miguel Angel (alonsodub.wordpress.com)
+This are some files for Set up your Host machine and get a cool terminal. I still working in a Bash script to do all this steps at once. This work for Ubuntu (Gnome)
 
-# GIT 
-Git Scripts for add GIT suppor to bash prompt profile 
+## GIT
+Git support scripts for git prompt and git completion
 
-* git-completion
-* git prompt 
+* git-completion.bash
+* git-prompt.sh
+* bash_profile
 
-
-# VIMRC 
+## VIMRC
 Vim config and common used plugins
 
 * bash completition 
 * file browser 
 
-# TMUX 
-Terminal multiplexer config file
-	* sudo apt install tmux 
-	* tmux depends on libevent and ncurses.
+## TMUX
+Terminal multiplexer configuration file 
+    * tmux depends on libevent and ncurses.
 
 
-
-from: https://github.com/alonsodub/HostSetup
-
-Miguel Angel (alonsodub.wordpress.com)
-this are some files for Set up your Host machine 
-and get a cool terminal. I still working in a Bash
-script to do all this steps at once. This work for 
-Ubuntu (Gnome) 
-
-
-Set up 
+## Set up
 ===========================================
-git clone https://github.com/alonsodub/HostSetup
-cd HostSetup/
+### Install basic packages
+```bash
+sudo apt install build-essential
+sudo apt install vim git
+sudo apt install bash-doc bash-completion
+```
 
-cp git-completion.bash ~/.git completion.bash                           
-cp git-prompt.sh ~/.git-prompt.sh  
-cat bash_profile_course >> ~/.bashrc
+### Git scripts
+```bash
+git clone https://github.com/MiguelAlonsoLazcano/TerminalSetUp
+cd TerminalSetup/
+```
 
-sudo apt-get install build-essential
-sudo apt-get install vim git
-sudo apt-get install bash-doc bash-completion
+```bash
+cp git/git-completion.bash ~/.git completion.bash
+cp git/git-prompt.sh ~/.git-prompt.sh
+cat git/bash_profile_course >> ~/.bashrc
+```
 
-[OPCIONAL]
-sudo apt-get install tmux
-cp tmux.conf ~/.tmux.conf 
-
+### Git configuration
+```bash
 git config --global user.name "User Name"
 git config --global user.mail "User Mail"
 git config --global color.ui true
 git config --global push.default upstream
 git config --global merge.conflictstyle diff3
+```
 
-[OPCIONAL]
+## Terminal multiplexor
+```bash
+sudo apt install libevent ncurses
+sudo apt install tmux
+cp tmux/tmux.conf ~/.tmux.conf
+```
+
+## Vim
+```bash
 git config --global core.editor vim 
 
 git clone https://github.com/aalonso/vimrc.git ~/.vim
 cd ~/.vim
 git submodule init 
 git submodule sync 
-git submoudle update 
+git submodule update
 ln -s ~/.vim/vimrc .vim 
+```
