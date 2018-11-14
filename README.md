@@ -33,13 +33,13 @@ sudo apt install bash-doc bash-completion
 ### Git scripts
 ```bash
 git clone https://github.com/MiguelAlonsoLazcano/TerminalSetUp
-cd TerminalSetup/
+cd TerminalSetUp/
 ```
 
 ```bash
-cp git/git-completion.bash ~/.git completion.bash
+cp git/git-completion.bash ~/.git-completion.bash
 cp git/git-prompt.sh ~/.git-prompt.sh
-cat git/bash_profile_course >> ~/.bashrc
+cat git/bash_profile >> ~/.bashrc
 ```
 
 ### Git configuration
@@ -62,7 +62,7 @@ cp tmux/tmux.conf ~/.tmux.conf
 ```bash
 git config --global core.editor vim 
 
-git clone https://github.com/aalonso/vimrc.git ~/.vim
+git clone https://github.com/MiguelAlonsoLazcano/vimrc ~/.vim
 cd ~/.vim
 git submodule init 
 git submodule sync 
